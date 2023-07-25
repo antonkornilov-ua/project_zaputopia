@@ -92,7 +92,7 @@
 
 .outline_btn {
     @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white dark:hover:text-gray-50 text-center text-sm font-inter flex items-center justify-center
-    dark:border-gray-50 dark:bg-gray-50 dark:hover:bg-transparent ;
+    dark:border-gray-50 dark:bg-gray-50 dark:hover:bg-transparent;
 }
 
 .head_text {
@@ -178,4 +178,3 @@
 .flex-between {
     @apply flex justify-between items-center;
 }
-
