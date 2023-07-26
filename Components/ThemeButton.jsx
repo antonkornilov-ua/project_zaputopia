@@ -18,7 +18,7 @@ const ThemeButton = () => {
         <button
             aria-label='Toggle Dark Mode'
             type='button'
-            className='rounded-full p-2 transition-colors hover:bg-gray-900 hover:text-gray-50 dark:hover:bg-gray-700 '
+            className='rounded-full p-2 transition-colors hover:bg-gray-900/50 hover:text-gray-50 dark:hover:bg-gray-700 '
             onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
             {resolvedTheme === 'dark' ? (
                 <SunIcon className='h-7 w-7 text-primary-orange ' />
