@@ -1,4 +1,26 @@
 'use client';
+/**
+ * Nav Component:
+ *
+ * This component represents the navigation bar of the application. It provides links and buttons for navigation,
+ * user authentication, and theme toggling. The navigation bar is responsive, with different layouts for desktop
+ * and mobile devices. Users can sign in using various authentication providers displayed in the navigation bar.
+ * When signed in, the user's profile picture is shown, and they have access to additional options such as creating
+ * a post, accessing their profile, and signing out. The component uses `next-auth/react` for authentication,
+ * and it utilizes the `useSession` and `signIn` functions to manage authentication state.
+ * The `ThemeButton` component is also included to enable theme switching in the application.
+ *
+ * Props:
+ * None
+ *
+ * Render:
+ * The component renders the navigation bar containing the Zaputopia logo, a link to the homepage, and the ThemeButton
+ * component for theme switching. The navigation bar also includes a section for desktop users and another section for
+ * mobile users. The desktop section displays various buttons and links based on the user's authentication state.
+ * The mobile section shows the user's profile picture and a dropdown menu with options such as accessing the user's
+ * profile, creating a prompt, and signing out.
+ */
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -7,8 +29,7 @@ import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 import ThemeButton from './ThemeButton';
 
 const Nav = () => {
-
-    const {data: session} = useSession()
+    const { data: session } = useSession();
 
     const [providers, setProviders] = useState(null);
     const [toggleDropDown, setToggleDropDown] = useState(false);

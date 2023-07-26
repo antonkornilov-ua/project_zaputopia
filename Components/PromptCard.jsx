@@ -1,4 +1,26 @@
 'use client';
+/**
+ * PromptCard Component:
+ *
+ * This component represents a prompt card that displays a user's prompt along with relevant details and actions.
+ * The prompt card includes the user's profile image, username, email, prompt content, associated tag, and copy
+ * prompt functionality. The component also provides options to edit and delete the prompt for the user who created it.
+ * The `PromptCard` component uses `next-auth/react` to fetch the user's session data and manages the state for the copy
+ * prompt functionality. It also utilizes the `usePathname` and `useRouter` hooks from `next/navigation` to handle routing.
+ * The component is designed to be used in various contexts, such as on the feed, user profile, or in a list of prompts.
+ *
+ * Props:
+ * - post (object): An object representing the prompt data containing fields like prompt content, tag, and creator details.
+ * - handleTagClick (function): A callback function to handle the click event when a tag is clicked.
+ * - handleEdit (function): A callback function to handle the edit action for the prompt.
+ * - handleDelete (function): A callback function to handle the delete action for the prompt.
+ *
+ * Render:
+ * The component renders a prompt card with the user's profile image, username, email, prompt content, and associated tag.
+ * The prompt card also includes a copy button that allows users to copy the prompt content to the clipboard. If the user
+ * viewing the prompt card is the creator of the prompt and the page path is '/profile', edit and delete options are displayed.
+ * The component uses `Image` from `next/image` for rendering the user's profile image with optimized loading and caching.
+ */
 
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';

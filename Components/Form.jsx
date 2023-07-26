@@ -1,3 +1,19 @@
+/**
+ * The `Form` component is a reusable form used for creating and editing prompts.
+ *
+ * Props:
+ * - type: A string representing the type of form, whether it is for creating or editing a prompt.
+ * - post: An object representing the prompt data to be displayed and edited in the form.
+ * - setPost: A function to update the `post` state with the new prompt data.
+ * - submitting: A boolean representing the form submission status (true when submitting, false otherwise).
+ * - handleSubmit: A function to handle the form submission when the user submits the form.
+ *
+ * Render:
+ * The component renders a form with fields for creating/editing a prompt, including a text area
+ * for the prompt content and an input field for the prompt tag. The form also includes a "Cancel" link
+ * to navigate back to the homepage and a "Submit" button for form submission.
+ * The "Submit" button is disabled when the form is in the submitting state.
+ */
 import Link from 'next/link';
 
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
