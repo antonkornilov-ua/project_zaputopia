@@ -23,7 +23,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
         setCopied(post.prompt);
         navigator.clipboard.writeText(post.prompt);
         setTimeout(() => {
-            setCopied('');
+            setCopied(false);
         }, 3000);
     };
 
@@ -52,7 +52,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
                         src={copied === post.prompt ? '/assets/icons/tick.svg' : '/assets/icons/copy.svg'}
                         width={12}
                         height={12}
-                        alt='copy'
+                        alt={copied === post.prompt ? 'tick_icon' : 'copy_icon'}
                     />
                 </div>
             </div>
@@ -65,10 +65,14 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
             {session?.user.id === post.creator._id && pathName === '/profile' && (
                 <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
-                    <p className='font-inter px-5 text-sm green_gradient cursor-pointer dark:text-green-700' onClick={handleEdit}>
+                    <p
+                        className='font-inter px-5 text-sm green_gradient cursor-pointer dark:text-green-700'
+                        onClick={handleEdit}>
                         Edit
                     </p>
-                    <p className='font-inter text-sm orange_gradient cursor-pointer dark:text-orange-500' onClick={handleDelete}>
+                    <p
+                        className='font-inter text-sm orange_gradient cursor-pointer dark:text-orange-500'
+                        onClick={handleDelete}>
                         Delete
                     </p>
                 </div>

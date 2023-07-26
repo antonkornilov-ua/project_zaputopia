@@ -11,7 +11,6 @@ const Home = () => {
                 <span class='green_gradient text-center inline-block'>
                     AI-Powered{' '}
                     <TypeWriter words={words} />
-                    
                 </span>
             </h1>
            

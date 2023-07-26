@@ -15,7 +15,6 @@ const PromptCardList = ({ data, handleTagClick }) => {
 
 const Feed = () => {
     const [allPosts, setAllPosts] = useState([]);
-
     //for search
 
     const [searchText, setSearchText] = useState('');
@@ -32,8 +31,8 @@ const Feed = () => {
         fetchPosts();
     }, []);
 
-    const filterPrompts = (searchtext) => {
-        const regex = new RegExp(searchtext, 'i');
+    const filterPrompts = (searchValue) => {
+        const regex = new RegExp(searchValue, 'i');
         return allPosts.filter(
             (item) => regex.test(item.creator.username) || regex.test(item.tag) || regex.test(item.prompt)
         );
