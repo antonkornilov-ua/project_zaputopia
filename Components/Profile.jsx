@@ -22,7 +22,7 @@
  * and delete.
  */
 
-import PromptCard from './PromptCard';
+import PromptCard from '@/Components/PromptCard';
 
 const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
     return (

@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 
-import Profile from "@Components/Profile"
+import Profile from "@/Components/Profile"
 
 const UserProfile = ({ params }) => {
     const searchParams = useSearchParams()

@@ -20,7 +20,7 @@
  * displayed with appropriate spacing and styling.
  */
 
-import PromptCard from './PromptCard';
+import PromptCard from '@/Components/PromptCard';
 
 const PromptCardList = ({ data, handleTagClick }) => {
     return (

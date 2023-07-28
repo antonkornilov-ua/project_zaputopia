@@ -1,6 +1,6 @@
-import Feed from '@Components/Feed';
-import TypeWriter from '@Components/TypeWriter';
-import words from '@utils/words';
+import Feed from '@/Components/Feed';
+import TypeWriter from '@/Components/TypeWriter';
+import words from '@/utils/words';
 
 const Home = () => {
     return (

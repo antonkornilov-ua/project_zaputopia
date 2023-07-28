@@ -30,7 +30,7 @@
  */
 
 import useSearchData from '@/hooks/useSearchData';
-import PromptCardList from './PromptCardList';
+import PromptCardList from '@/Components/PromptCardList';
 import { useEffect, useState } from 'react';
 
 const Feed = () => {

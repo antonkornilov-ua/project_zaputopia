@@ -26,7 +26,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
-import ThemeButton from './ThemeButton';
+import ThemeButton from '@/Components/ThemeButton';
 
 const Nav = () => {
     const { data: session } = useSession();
