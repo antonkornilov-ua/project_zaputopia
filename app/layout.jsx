@@ -1,6 +1,6 @@
 import Nav from '@/Components/Nav';
 import Provider from '@/Components/Provider';
-import '../styles/globals.css';
+import '@/styles/globals.css';
 import ThemeAppProvider from '@/Components/ThemeProvider';
 import Wallpaper from '@/Components/Wallpaper';
 
