@@ -29,7 +29,7 @@
  * When a tag is clicked, it filters the results to show prompts with the clicked tag.
  */
 
-import useSearchData from '@hooks/useSearchData';
+import useSearchData from '@/hooks/useSearchData';
 import PromptCardList from './PromptCardList';
 import { useEffect, useState } from 'react';
 
